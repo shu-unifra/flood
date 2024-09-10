@@ -6,8 +6,8 @@ import flood
 
 
 def get_all_equality_tests(
-    start_block: int = 10_000_000,
-    end_block: int = 16_000_000,
+    start_block: int = 10_0,
+    end_block: int = 16_0,
     range_size: int = 100,
     random_seed: flood.RandomSeed | None = None,
 ) -> typing.Sequence[flood.EqualityTest]:
@@ -28,8 +28,8 @@ def get_all_equality_tests(
 
 
 def get_vanilla_equality_tests(
-    start_block: int = 10_000_000,
-    end_block: int = 16_000_000,
+    start_block: int = 10_0,
+    end_block: int = 16_0,
     range_size: int = 100,
     random_seed: flood.RandomSeed | None = None,
 ) -> typing.Sequence[flood.EqualityTest]:
@@ -175,8 +175,8 @@ def get_vanilla_equality_tests(
 
 
 def get_trace_equality_tests(
-    start_block: int = 10_000_000,
-    end_block: int = 16_000_000,
+    start_block: int = 10_0,
+    end_block: int = 16_0,
     random_seed: flood.RandomSeed | None = None,
 ) -> typing.Sequence[flood.EqualityTest]:
     """
@@ -330,7 +330,7 @@ def get_trace_equality_tests(
         #         [],
         #         {
         #             'to_addresses': ['0x6b175474e89094c44da98b954eedeac495271d0f'],  # noqa: E501
-        #             'start_block': 10_000_000,
+        #             'start_block': 10_0,
         #             'end_block': 10_000_001,
         #             'count': 10,
         #         }

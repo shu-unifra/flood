@@ -15,7 +15,7 @@ default_sizes = {
     'S': 10_000,
     'M': 100_000,
     'L': 1_000_000,
-    'XL': 10_000_000,
+    'XL': 10_0,
 }
 
 default_datatypes = [
