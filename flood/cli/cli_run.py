@@ -30,7 +30,7 @@ def run_cli(raw_command: str | None = None) -> None:
         ('cd',): 'toolcli.command_utils.standard_subcommands.cd_command',
         ('update',): 'flood.cli.update_command',
     }
-
+    print("This is cli_run.py")
     config: toolcli.CLIConfig = {
         'base_command': 'flood',
         'description': flood.__doc__,
