@@ -1,0 +1,1 @@
+{"flood_version":"0.3.1","type":"single_test","name":"eth_getCode","test_parameters":{"flood_version":"0.3.1-ab4beef0","test_name":"eth_getCode","rates":[800,1600,3200,4500,6400],"durations":[15,15,15,15,15],"vegeta_args":null,"network":"ethereum","random_seed":null}}
