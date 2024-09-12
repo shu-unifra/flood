@@ -31,7 +31,7 @@ def generate_calls_eth_get_block_by_number(
             n=n_calls,
             random_seed=random_seed,
             start_block=0,
-            end_block=16_0,
+            end_block=9_0,
             network=network,
         )
     return [
@@ -79,12 +79,14 @@ def generate_calls_eth_fee_history(
         block_numbers = block_generators.generate_block_numbers(
             n=n_calls,
             random_seed=random_seed,
-            start_block=13_0,
-            end_block=17_0,
+            start_block=1_3,
+            end_block=9_0,
             network=network,
         )
     if block_count is None:
-        block_count = 1024
+        #shutest
+        #block_count=1024
+        block_count = 80
 
     return [
         ctc.rpc.construct_eth_fee_history(
@@ -114,8 +116,8 @@ def generate_calls_eth_get_eth_balance(
         if n_calls is None:
             raise Exception('must floodify more parameters')
         block_numbers = block_generators.generate_block_numbers(
-            start_block=10_0,
-            end_block=16_0,
+            start_block=1_0,
+            end_block=9_0,
             n=n_calls,
             random_seed=random_seed,
             network=network,
@@ -151,8 +153,8 @@ def generate_calls_eth_get_transaction_count(
         if n_calls is None:
             raise Exception('must floodify more parameters')
         block_numbers = block_generators.generate_block_numbers(
-            start_block=10_0,
-            end_block=16_0,
+            start_block=1_0,
+            end_block=9_0,
             n=n_calls,
             random_seed=random_seed,
             network=network,
@@ -265,8 +267,8 @@ def generate_calls_eth_get_logs(
         if block_range_size is None:
             block_range_size = 100
         block_ranges = block_generators.generate_block_ranges(
-            start_block=10_0,
-            end_block=16_0,
+            start_block=1_0,
+            end_block=9_0,
             n=n_calls,
             range_size=block_range_size,
             random_seed=random_seed,
@@ -305,8 +307,8 @@ def generate_calls_eth_get_code(
         if n_calls is None:
             raise Exception('must floodify more parameters')
         block_numbers = block_generators.generate_block_numbers(
-            start_block=10_0,
-            end_block=16_0,
+            start_block=1_0,
+            end_block=9_0,
             n=n_calls,
             random_seed=random_seed,
             network=network,
@@ -342,8 +344,8 @@ def generate_calls_eth_get_storage_at(
         if n_calls is None:
             raise Exception('must floodify more parameters')
         block_numbers = block_generators.generate_block_numbers(
-            start_block=10_0,
-            end_block=16_0,
+            start_block=1_0,
+            end_block=9_0,
             n=n_calls,
             random_seed=random_seed,
             network=network,
@@ -390,7 +392,7 @@ def generate_calls_eth_call(
     )
     block_numbers = block_generators.generate_block_numbers(
         start_block=1_0,
-        end_block=16_0,
+        end_block=9_0,
         n=n_calls,
         random_seed=random_seed,
         network=network,
@@ -429,7 +431,7 @@ def generate_calls_trace_block(
             n=n_calls,
             random_seed=0,
             start_block=0,
-            end_block=16_0,
+            end_block=9_0,
             network=network,
         )
     return [
@@ -479,7 +481,7 @@ def generate_calls_trace_replay_block_transactions(
             n=n_calls,
             random_seed=random_seed,
             start_block=0,
-            end_block=16_0,
+            end_block=9_0,
             network=network,
         )
     return [
@@ -507,7 +509,7 @@ def generate_calls_trace_replay_block_transactions_state_diff(
             n=n_calls,
             random_seed=random_seed,
             start_block=0,
-            end_block=16_0,
+            end_block=9_0,
             network=network,
         )
     return [
@@ -535,7 +537,7 @@ def generate_calls_trace_replay_block_transactions_vm_trace(
             n=n_calls,
             random_seed=random_seed,
             start_block=0,
-            end_block=16_0,
+            end_block=9_0,
             network=network,
         )
     return [

@@ -50,7 +50,7 @@ def download_raw_data(
             )
             output_path = os.path.join(output_dir, filename)
             url = url_root + filename
-
+            print("download url=",url)
             if only_missing and os.path.isfile(output_path):
                 continue
 

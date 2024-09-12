@@ -39,17 +39,17 @@ def generate_test_eth_get_logs(
 
 generate_test_eth_get_logs_lusd_transfers_s = functools.partial(
     generate_test_eth_get_logs,
-    contract_address='0x5f98805a4e8be255a32880fdec7f6728c6568ba0',
+    contract_address='0xaF40C1529dAa78CaB6E8E5F3752620Ea2204Be6d',
     block_range_size=100,
 )
 generate_test_eth_get_logs_lusd_transfers_m = functools.partial(
     generate_test_eth_get_logs,
-    contract_address='0x5f98805a4e8be255a32880fdec7f6728c6568ba0',
+    contract_address='0xaF40C1529dAa78CaB6E8E5F3752620Ea2204Be6d',
     block_range_size=1000,
 )
 generate_test_eth_get_logs_lusd_transfers_l = functools.partial(
     generate_test_eth_get_logs,
-    contract_address='0x5f98805a4e8be255a32880fdec7f6728c6568ba0',
+    contract_address='0xaF40C1529dAa78CaB6E8E5F3752620Ea2204Be6d',
     block_range_size=10000,
 )
 
