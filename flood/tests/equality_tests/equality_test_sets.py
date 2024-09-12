@@ -92,7 +92,7 @@ def get_vanilla_equality_tests(
             [],
             {
                 'address': '0xaF40C1529dAa78CaB6E8E5F3752620Ea2204Be6d',
-                'position': '0x0000000000000000000000000000000000000000000000000000000000000002',  # noqa: E501
+                'position': '0x0000000000000000000000000000000000000000000000000000000000000001',  # noqa: E501
                 'block_number': start_block,
             },
         ),
@@ -447,7 +447,7 @@ def get_trace_equality_tests(
             {
                 'to_address': '0xaF40C1529dAa78CaB6E8E5F3752620Ea2204Be6d',
                 'call_data': '0x70a082310000000000000000000000006e0d01a76c3cf4288372a29124a26d4353ee51be',  # noqa: E501
-                'block_number': '0xc65d40',
+                'block_number': '0x7d',
                 'gas_price': '0x6ba9382b14',
                 'trace_type': {'tracer': 'callTracer'},
             },
@@ -459,7 +459,7 @@ def get_trace_equality_tests(
             {
                 'to_address': '0xaF40C1529dAa78CaB6E8E5F3752620Ea2204Be6d',
                 'call_data': '0x70a082310000000000000000000000006e0d01a76c3cf4288372a29124a26d4353ee51be',  # noqa: E501
-                'block_number': '0xc65d40',
+                'block_number': '0x7d',
                 'gas_price': '0x6ba9382b14',
                 'trace_type': {'tracer': 'prestateTracer'},
             },
@@ -468,7 +468,7 @@ def get_trace_equality_tests(
             'debug_traceTransaction',
             ctc.rpc.construct_debug_trace_transaction,
             [
-                '0x9e63085271890a141297039b3b711913699f1ee4db1acb667ad7ce304772036b',
+                '0xd6427ec6b8737e3f683f5d45f7061192c36a38d04ef68d30c577ea777a006704',
                 {'tracer': 'callTracer', 'tracerConfig': {}},
             ],
             {},
@@ -477,7 +477,7 @@ def get_trace_equality_tests(
             'debug_traceTransaction_prestateTracer',
             ctc.rpc.construct_debug_trace_transaction,
             [
-                '0x9e63085271890a141297039b3b711913699f1ee4db1acb667ad7ce304772036b',
+                '0xd6427ec6b8737e3f683f5d45f7061192c36a38d04ef68d30c577ea777a006704',
                 {'tracer': 'prestateTracer', 'tracerConfig': {}},
             ],
             {},
