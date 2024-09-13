@@ -21,8 +21,8 @@ methods=(
   "eth_getBalance"            #ethereum_contracts_samples__L__v1_0_0.parquet 文件
   "eth_getCode"               #ethereum_contracts_samples__L__v1_0_0.parquet
 
-  # "eth_getStorageAt"          #ethereum_slots_samples__L__v1_0_0.parquet
-  # "eth_getTransactionCount"   #ethereum_eoas_samples__L__v1_0_0.parquet
+  "eth_getStorageAt"          #ethereum_slots_samples__L__v1_0_0.parquet
+  "eth_getTransactionCount"   #ethereum_eoas_samples__L__v1_0_0.parquet
   
   # "trace_block"               #OK  !!![the method trace_block does not exist/is not available]
   # "trace_replayBlockTransactions" #OK !!![the method trace_replayBlockTransactions does not exist/is not available]
@@ -59,11 +59,13 @@ else
     echo "Available methods: ${methods[*]}"
     exit 1
   fi
+  export http_proxy=127.0.0.1:8080
+  export https_proxy=127.0.0.1:8080
 
   # 执行选定的方法
-  rm -rf "./out/${method}"
+  rm -rf "./out/${selected_method}"
   #800 1600 3200 4200 6400
-  cmd="flood ${selected_method} NODE1_NAME=${RPC_URL} --rates  10 --duration 20 -o ./out/${method}"
+  cmd="flood ${selected_method} NODE1_NAME=${RPC_URL} --rates 800 1600 3200 4500 6400 --duration 15 -o ./out/${selected_method}"
   echo $cmd
   eval $cmd
 fi
